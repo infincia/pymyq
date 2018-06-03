@@ -168,7 +168,7 @@ class MyQAPI:
             except TypeError:
                 return False
         else:
-            return False;
+            return False
 
     def get_status(self, device_id):
         """List only MyQ garage door devices."""
