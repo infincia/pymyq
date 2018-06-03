@@ -76,7 +76,7 @@ class MyQAPI:
 
     def is_supported_brand(self):
         try:
-            brand = self.BRAND_MAPPINGS[self.brand];
+            brand = self.BRAND_MAPPINGS[self.brand]
         except KeyError:
             return False
 
