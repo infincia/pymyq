@@ -1,7 +1,6 @@
-import requests
-import logging
-
 from enum import Enum
+import logging
+import requests
 
 class MyQDoorState(Enum):
     """
