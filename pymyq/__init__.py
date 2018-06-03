@@ -96,8 +96,8 @@ class MyQAPI:
                     login_endpoint=self.LOGIN_ENDPOINT),
                     json=params,
                     headers={
-                       'MyQApplicationId': self.BRAND_MAPPINGS[self.brand][self.APP_ID],
-                       'User-Agent': self.USERAGENT
+                        'MyQApplicationId': self.BRAND_MAPPINGS[self.brand][self.APP_ID],
+                        'User-Agent': self.USERAGENT
                     },
                     timeout=self.REQUEST_TIMEOUT
             )
