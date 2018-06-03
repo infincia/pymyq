@@ -132,7 +132,7 @@ class MyQAPI:
             )
 
             devices.raise_for_status()
-            
+
         except requests.exceptions.HTTPError as ex:
             self.logger.error("MyQ - API Error[get_devices] %s", ex)
             return False
@@ -143,7 +143,7 @@ class MyQAPI:
         except KeyError:
             self.logger.error("MyQ - Login security token may have expired, will attempt relogin on next update")
             self._logged_in = False
-        
+
 
     def get_garage_doors(self):
         """List only MyQ garage door devices."""
@@ -182,7 +182,7 @@ class MyQAPI:
                         if attribute['AttributeDisplayName'] == 'doorstate':
                             myq_garage_state = attribute['Value']
                             garage_state = self.DOOR_STATE[myq_garage_state]
-        
+
         return garage_state
 
     def close_device(self, device_id):
