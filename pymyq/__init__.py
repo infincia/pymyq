@@ -177,7 +177,6 @@ class MyQAPI:
         if devices != False:
             for device in devices:
                 if device['MyQDeviceTypeName'] in self.SUPPORTED_DEVICE_TYPE_NAMES and device['MyQDeviceId'] == device_id:
-                    dev = {}
                     for attribute in device['Attributes']:
                         if attribute['AttributeDisplayName'] == 'doorstate':
                             myq_garage_state = attribute['Value']
