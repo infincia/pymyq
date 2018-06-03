@@ -1,6 +1,20 @@
 import requests
 import logging
 
+from enum import Enum
+
+class MyQDoorState(Enum):
+    """
+        Represents the MyQ API door states using string values for compatibility
+        with the existing library API
+    """
+    OPEN = 'open'
+    CLOSED = 'closed'
+    STOPPED = 'stopped'
+    OPENING = 'opening'
+    CLOSING = 'closing'
+    IN_TRANSITION = 'in_transition'
+
 
 class MyQAPI:
     """Class for interacting with the MyQ iOS App API."""
